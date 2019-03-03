@@ -18,7 +18,7 @@
 
 <div style="height: 200px;"></div>
 
-  <swiper1 ref="mySwiper1">
+  <swiper1 ref="mySwiper1" :options="swiperOption">
     <!-- slides -->
     <swiper-slide1>I'm Slide 1</swiper-slide1>
     <swiper-slide1>I'm Slide 2</swiper-slide1>
@@ -29,28 +29,12 @@
     <swiper-slide1>I'm Slide 7</swiper-slide1>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
-    <div class="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" slot="button-next"></div>
+    <div class="swiper-button-prev" id="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" id="swiper-button-next" slot="button-next"></div>
     <div class="swiper-scrollbar"   slot="scrollbar"></div>
   </swiper1>
 <div style="height: 200px;"></div>
 
-  <swiper1  ref="mySwiper2">
-    <!-- slides -->
-    <swiper-slide1>I'm Slide 1</swiper-slide1>
-    <swiper-slide1>I'm Slide 2</swiper-slide1>
-    <swiper-slide1>I'm Slide 3</swiper-slide1>
-    <swiper-slide1>I'm Slide 4</swiper-slide1>
-    <swiper-slide1>I'm Slide 5</swiper-slide1>
-    <swiper-slide1>I'm Slide 6</swiper-slide1>
-    <swiper-slide1>I'm Slide 7</swiper-slide1>
-    <!-- Optional controls -->
-    <div class="swiper-pagination"  slot="pagination"></div>
-    <div class="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" slot="button-next"></div>
-    <div class="swiper-scrollbar"   slot="scrollbar"></div>
-  </swiper1>
-<div style="height: 200px;"></div>
 
 
       <div class="main-screen">
@@ -370,7 +354,13 @@
           img5: require("@/assets/images/grid-slider5.png"),
         },
         objAddr: '',
-        objType: ''
+        objType: '',
+        swiperOption: {
+          navigation: {
+            nextEl: '#swiper-button-next',
+            prevEl: '#swiper-button-prev',
+          }
+        }
       }
     },
     computed: {
@@ -386,9 +376,6 @@
       },
      swiper1() {
         return this.$refs.mySwiper1.swiper
-      },
-     swiper2() {
-        return this.$refs.mySwiper2.swiper
       }
     },
     methods: {
@@ -399,18 +386,6 @@
           backgroundSize: '100%'
         };
       }
-    },
-    mounted() {
-      // this.swiper1.navigation: {
-      //   nextEl: '[ref="mySwiper1"] .swiper-button-next',
-      //   prevEl: '[ref="mySwiper1"] .swiper-button-prev',
-      // }
-      this.swiper1.navigation.nextEl = '[ref="mySwiper1"] .swiper-button-next'
-      this.swiper1.navigation.prevEl = '[ref="mySwiper1"] .swiper-button-prev'
-
-      this.swiper1.navigation.update()
-      this.swiper1.slideTo(3, 1000, false)
-      this.swiper1.height = 1000
     },
     created () {
     }
