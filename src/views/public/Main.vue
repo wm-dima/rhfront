@@ -571,7 +571,7 @@ div.center-wrap {
 
 
   &__wrap {
-    background: #fff;
+    background: $white;
     margin-left: auto;
     padding-top: 50px;
     padding-left: 30px;
@@ -652,7 +652,7 @@ h2 {
       position: absolute;
       padding-left: 30px;
       bottom: 35px;
-      color: #fff;
+      color: $white;
       font-weight: 700;
       font-size: 28px;  
       z-index: 2;
@@ -665,7 +665,7 @@ h2 {
       left: 30px;
       z-index: 2;
       bottom: 35px;
-      background: #fff;
+      background: $white;
       padding-left: 25px;
       padding-bottom: 45px;
       padding-top: 35px;
@@ -681,7 +681,7 @@ h2 {
       h3 {
         position: static;
         font-size: 28px;
-        color: #000;
+        color: $black;
         padding-left: 0px;
         margin-bottom: 6px;
       }
@@ -755,7 +755,7 @@ h2 {
   }
 
   h2 {
-    color: #fff;
+    color: $white;
     text-transform: uppercase;
     margin-top: 80px;
     margin-bottom: 70px;
@@ -780,7 +780,7 @@ h2 {
     p {
       font-size: 16px;
       line-height: 21px;
-      color: #fff;
+      color: $white;
       font-weight: 300;
       text-align: center;
     }
@@ -815,7 +815,7 @@ h2 {
 
   h3 {
     font-size: 26px;
-    color: #fff;
+    color: $white;
     font-weight: 700;
     position: relative;
     margin-bottom: 15px;
@@ -862,7 +862,7 @@ h2 {
       font-weight: 500;
       line-height: 35px;
       padding-left: 15px;
-      color: #fff;
+      color: $white;
       bottom: 0px;
       left: 0px;
       width: 100%;
@@ -871,7 +871,7 @@ h2 {
 
     p {
         font-weight: 500;
-        color: #000;
+        color: $black;
         opacity: 0.9;
         font-size: 14px;
         &:last-child {
@@ -1021,9 +1021,9 @@ h2 {
   padding: 0px !important;
   display: flex;
   align-items: center;
-  color: #fff;
+  color: $white;
   &--green {
-      color: #fff;
+      color: $white;
       background-color: rgba(55, 165, 140, 0.89);
       > div {
           background-color: rgba(0, 0, 0, 0.4);
@@ -1142,7 +1142,7 @@ h2 {
 
     p {
       text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-      color: #fff;
+      color: $white;
       font-size: 28px;
       bottom: 35px;
       left: 30px;
