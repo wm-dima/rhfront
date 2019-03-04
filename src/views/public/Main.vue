@@ -1,18 +1,6 @@
 <template>
     <main>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
-      <br>
-      <br>
-      <br>
-            <br>
-      <br>
-      <br>      <br>
-      <br>
-      <br>      <br>
-      <br>
-      <br>
-
-      <div class="center-wrap">
+      <div class="center-wrap center-wrap--montazh">
         <div class="search-montazh">
           <h2>Найти сертифицированного монтажника</h2>
           <div>
@@ -53,32 +41,11 @@
         </div>
       </div>
 
-<div style="height: 200px;"></div>
-
-  <swiper1 ref="mySwiper1" :options="swiperOption">
-    <!-- slides -->
-    <swiper-slide1>I'm Slide 1</swiper-slide1>
-    <swiper-slide1>I'm Slide 2</swiper-slide1>
-    <swiper-slide1>I'm Slide 3</swiper-slide1>
-    <swiper-slide1>I'm Slide 4</swiper-slide1>
-    <swiper-slide1>I'm Slide 5</swiper-slide1>
-    <swiper-slide1>I'm Slide 6</swiper-slide1>
-    <swiper-slide1>I'm Slide 7</swiper-slide1>
-    <!-- Optional controls -->
-    <div class="swiper-pagination"  slot="pagination"></div>
-    <div class="swiper-button-prev" id="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" id="swiper-button-next" slot="button-next"></div>
-    <div class="swiper-scrollbar"   slot="scrollbar"></div>
-  </swiper1>
-<div style="height: 200px;"></div>
-
-
-
       <div class="main-screen">
         <div class="center-wrap">
           <div class="main-screen__wrap">
             <h1>REHAU PRO<br> 200% качества</h1>
-            <p>Больше, чем просто</p>
+            <p>Больше, чем просто монтаж</p>
           </div>
         </div>
       </div>
@@ -352,15 +319,24 @@
     </main>
 </template>
 <script>
+  document.addEventListener("DOMContentLoaded", function(){
+      setTimeout(function(){
+      document.querySelector('.swiper-pagination-progressbar-fill').style.backgroundColor = "#dd0060";
+      document.querySelector('.slider-grid__item-wrap button').addEventListener('click', function(){
+        alert(123);
+      });
+    }, 2000);
 
-    import 'swiper/dist/css/swiper.css'
-    import { swiper as swiper1, swiperSlide as swiperSlide1 } from 'vue-awesome-swiper'
+  });
+  import 'swiper/dist/css/swiper.css'
+  import { swiper as swiper1, swiperSlide as swiperSlide1 } from 'vue-awesome-swiper'
+  import { swiper as swiper2, swiperSlide as swiperSlide2 } from 'vue-awesome-swiper'
+  import { swiper as swiper3, swiperSlide as swiperSlide3 } from 'vue-awesome-swiper'
 
 
   import { ProfileCard, InfoAreas, BlogCard } from "@/components";
   import { LoginCard, Modal } from "@/components";
   import Mixins from "@/plugins/basicMixins";
-
 
 
 
@@ -377,6 +353,8 @@
       InfoAreas,
       BlogCard,
       swiper1,
+      swiper2,
+      swiper3,
       swiperSlide1
     },
 
@@ -428,12 +406,53 @@
         },
         objAddr: '',
         objType: '',
-        swiperOption: {
-          navigation: {
-            nextEl: '#swiper-button-next',
-            prevEl: '#swiper-button-prev',
-          }
+
+        swiperOption1: {
+        slidesPerView: 3,
+          loop: true,
+          autoHeight: true,
+          grabCursor: true,
+          pagination: {
+              el: '.slider-grid-wrap .swiper-pagination',
+              type: 'progressbar',
+            },
+              navigation: {
+            nextEl: '.slider-grid-wrap--home .slider-grid__next',
+            prevEl: '.slider-grid-wrap--home .slider-grid__prev',
+            },
+             autoplay: {
+              delay: 5000,
+            },
+        },
+
+        swiperOption2: {
+          slidesPerView: 4,
+          loop: true,
+          autoHeight: true,
+          spaceBetween: 20,
+                        navigation: {
+            nextEl: '.slider-where-container .slider-where__next',
+            prevEl: '.slider-where-container .slider-where__prev',
+            },
+             autoplay: {
+              delay: 5000,
+            },
+        },
+
+        swiperOption3: {
+        slidesPerView: 3,
+          loop: true,
+          autoHeight: true,
+          grabCursor: true,
+              navigation: {
+            nextEl: '.slider-grid-wrap--team .slider-grid__next',
+            prevEl: '.slider-grid-wrap--team .slider-grid__prev',
+            },
+             autoplay: {
+              delay: 5000,
+            },
         }
+
       }
     },
     computed: {
@@ -449,6 +468,12 @@
       },
      swiper1() {
         return this.$refs.mySwiper1.swiper
+      },
+     swiper2() {
+        return this.$refs.mySwiper2.swiper
+      },
+     swiper3() {
+        return this.$refs.mySwiper3.swiper
       }
     },
     methods: {
@@ -541,26 +566,33 @@ div.center-wrap {
   div.center-wrap {
     display: flex;
   }
+
+
   &__wrap {
     background: #fff;
     margin-left: auto;
     padding-top: 50px;
-    padding-left: 35px;
-    padding-bottom: 55px;
+    padding-left: 30px;
+    min-height: 200px;
+    padding-bottom: 0px;
     padding-right: 35px;
     margin-bottom: 140px;
-        box-shadow: 0 12px 20px -10px rgba(233,30,99,.1), 0 4px 20px 0 rgba(0,0,0,.3), 0 7px 8px -5px rgba(233,30,99,0.2);
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 12px 20px -10px rgba(233,30,99,.1), 0 4px 20px 0 rgba(0,0,0,.3), 0 7px 8px -5px rgba(233,30,99,0.2);
     border-radius: 1px;
     margin-top: 230px;
     h1 {
-      font-size: 40px;
-      line-height: 41px;
+      font-size: 32px;
+      line-height: 31px;
       margin-bottom: 10px;
-      font-weight: 700;
+      font-weight: 900;
     }
 
     p {
-      font-size: 25px;
+      font-size: 20px;
+       font-weight: 400;
+       margin-top: 20px;
     }
   }
 
@@ -887,7 +919,9 @@ h2 {
     max-height: 42px !important;
     display: none;
   }
-
+.center-wrap--montazh {
+  padding-top: 190px;
+}
 .search-montazh {
   background: #ececec;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.24);
