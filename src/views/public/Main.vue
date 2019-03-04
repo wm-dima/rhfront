@@ -41,27 +41,6 @@
         </div>
       </div>
 
-<div style="height: 200px;"></div>
-
-  <swiper1 ref="mySwiper1" :options="swiperOption">
-    <!-- slides -->
-    <swiper-slide1>I'm Slide 1</swiper-slide1>
-    <swiper-slide1>I'm Slide 2</swiper-slide1>
-    <swiper-slide1>I'm Slide 3</swiper-slide1>
-    <swiper-slide1>I'm Slide 4</swiper-slide1>
-    <swiper-slide1>I'm Slide 5</swiper-slide1>
-    <swiper-slide1>I'm Slide 6</swiper-slide1>
-    <swiper-slide1>I'm Slide 7</swiper-slide1>
-    <!-- Optional controls -->
-    <div class="swiper-pagination"  slot="pagination"></div>
-    <div class="swiper-button-prev" id="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" id="swiper-button-next" slot="button-next"></div>
-    <div class="swiper-scrollbar"   slot="scrollbar"></div>
-  </swiper1>
-<div style="height: 200px;"></div>
-
-
-
       <div class="main-screen">
         <div class="center-wrap">
           <div class="main-screen__wrap">
