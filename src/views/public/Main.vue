@@ -53,6 +53,43 @@
         </div>
       </div>
 
+<div style="height: 200px;"></div>
+
+  <swiper1 ref="mySwiper1">
+    <!-- slides -->
+    <swiper-slide1>I'm Slide 1</swiper-slide1>
+    <swiper-slide1>I'm Slide 2</swiper-slide1>
+    <swiper-slide1>I'm Slide 3</swiper-slide1>
+    <swiper-slide1>I'm Slide 4</swiper-slide1>
+    <swiper-slide1>I'm Slide 5</swiper-slide1>
+    <swiper-slide1>I'm Slide 6</swiper-slide1>
+    <swiper-slide1>I'm Slide 7</swiper-slide1>
+    <!-- Optional controls -->
+    <div class="swiper-pagination"  slot="pagination"></div>
+    <div class="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" slot="button-next"></div>
+    <div class="swiper-scrollbar"   slot="scrollbar"></div>
+  </swiper1>
+<div style="height: 200px;"></div>
+
+  <swiper1  ref="mySwiper2">
+    <!-- slides -->
+    <swiper-slide1>I'm Slide 1</swiper-slide1>
+    <swiper-slide1>I'm Slide 2</swiper-slide1>
+    <swiper-slide1>I'm Slide 3</swiper-slide1>
+    <swiper-slide1>I'm Slide 4</swiper-slide1>
+    <swiper-slide1>I'm Slide 5</swiper-slide1>
+    <swiper-slide1>I'm Slide 6</swiper-slide1>
+    <swiper-slide1>I'm Slide 7</swiper-slide1>
+    <!-- Optional controls -->
+    <div class="swiper-pagination"  slot="pagination"></div>
+    <div class="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" slot="button-next"></div>
+    <div class="swiper-scrollbar"   slot="scrollbar"></div>
+  </swiper1>
+<div style="height: 200px;"></div>
+
+
       <div class="main-screen">
         <div class="center-wrap">
           <div class="main-screen__wrap">
@@ -331,24 +368,15 @@
     </main>
 </template>
 <script>
-  document.addEventListener("DOMContentLoaded", function(){
-      setTimeout(function(){
-      document.querySelector('.swiper-pagination-progressbar-fill').style.backgroundColor = "#dd0060";
-      document.querySelector('.slider-grid__item-wrap button').addEventListener('click', function(){
-        alert(123);
-      });
-    }, 2000);
 
-  });
-  import 'swiper/dist/css/swiper.css'
-  import { swiper as swiper1, swiperSlide as swiperSlide1 } from 'vue-awesome-swiper'
-  import { swiper as swiper2, swiperSlide as swiperSlide2 } from 'vue-awesome-swiper'
-  import { swiper as swiper3, swiperSlide as swiperSlide3 } from 'vue-awesome-swiper'
+    import 'swiper/dist/css/swiper.css'
+    import { swiper as swiper1, swiperSlide as swiperSlide1 } from 'vue-awesome-swiper'
 
 
   import { ProfileCard, InfoAreas, BlogCard } from "@/components";
   import { LoginCard, Modal } from "@/components";
   import Mixins from "@/plugins/basicMixins";
+
 
 
 
@@ -365,8 +393,6 @@
       InfoAreas,
       BlogCard,
       swiper1,
-      swiper2,
-      swiper3,
       swiperSlide1
     },
 
@@ -483,9 +509,6 @@
       },
      swiper2() {
         return this.$refs.mySwiper2.swiper
-      },
-     swiper3() {
-        return this.$refs.mySwiper3.swiper
       }
     },
     methods: {
@@ -499,6 +522,18 @@
       ulClick( str ){
         this.ulTitle = str;
       }
+    },
+    mounted() {
+      // this.swiper1.navigation: {
+      //   nextEl: '[ref="mySwiper1"] .swiper-button-next',
+      //   prevEl: '[ref="mySwiper1"] .swiper-button-prev',
+      // }
+      this.swiper1.navigation.nextEl = '[ref="mySwiper1"] .swiper-button-next'
+      this.swiper1.navigation.prevEl = '[ref="mySwiper1"] .swiper-button-prev'
+
+      this.swiper1.navigation.update()
+      this.swiper1.slideTo(3, 1000, false)
+      this.swiper1.height = 1000
     },
     created () {
     }
