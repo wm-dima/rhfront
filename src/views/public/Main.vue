@@ -8,7 +8,6 @@
               <label>Адрес объекта</label>
               <md-input v-model="initial"></md-input>
             </md-field>
-
             <template>
               <div class="md-layout">
                 <div class="md-layout-item md-size-250">
