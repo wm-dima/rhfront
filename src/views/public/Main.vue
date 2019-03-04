@@ -1,18 +1,6 @@
 <template>
     <main>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
-      <br>
-      <br>
-      <br>
-            <br>
-      <br>
-      <br>      <br>
-      <br>
-      <br>      <br>
-      <br>
-      <br>
-
-      <div class="center-wrap">
+      <div class="center-wrap center-wrap--montazh">
         <div class="search-montazh">
           <h2>Найти сертифицированного монтажника</h2>
           <div>
@@ -57,7 +45,7 @@
         <div class="center-wrap">
           <div class="main-screen__wrap">
             <h1>REHAU PRO<br> 200% качества</h1>
-            <p>Больше, чем просто</p>
+            <p>Больше, чем просто монтаж</p>
           </div>
         </div>
       </div>
@@ -509,6 +497,8 @@
 
 <style lang="scss" scoped>
 
+@import "@/assets/scss/material-kit/_colors.scss";
+
 html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 
 @font-face {
@@ -578,26 +568,33 @@ div.center-wrap {
   div.center-wrap {
     display: flex;
   }
+
+
   &__wrap {
     background: #fff;
     margin-left: auto;
     padding-top: 50px;
-    padding-left: 35px;
-    padding-bottom: 55px;
+    padding-left: 30px;
+    min-height: 200px;
+    padding-bottom: 0px;
     padding-right: 35px;
     margin-bottom: 140px;
-        box-shadow: 0 12px 20px -10px rgba(233,30,99,.1), 0 4px 20px 0 rgba(0,0,0,.3), 0 7px 8px -5px rgba(233,30,99,0.2);
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 12px 20px -10px rgba(233,30,99,.1), 0 4px 20px 0 rgba(0,0,0,.3), 0 7px 8px -5px rgba(233,30,99,0.2);
     border-radius: 1px;
     margin-top: 230px;
     h1 {
-      font-size: 40px;
-      line-height: 41px;
+      font-size: 32px;
+      line-height: 31px;
       margin-bottom: 10px;
-      font-weight: 700;
+      font-weight: 900;
     }
 
     p {
-      font-size: 25px;
+      font-size: 20px;
+       font-weight: 400;
+       margin-top: 20px;
     }
   }
 
@@ -676,7 +673,7 @@ h2 {
       box-shadow: 0 12px 20px -10px rgba(233,30,99,.1), 0 4px 20px 0 rgba(0,0,0,.3), 0 7px 8px -5px rgba(233,30,99,.2);
       border-radius: 1px;
       .md-button.md-simple .md-ripple i  {
-         color: #dd0060 !important;
+         color: $pink !important;
          &:hover {
           color: red !important;
          }
@@ -693,7 +690,7 @@ h2 {
         margin-bottom: 40px;
       }
       a {
-        color: #dd0060;
+        color: $pink;
         text-decoration: none;
         font-weight: 700;
         font-size: 20px;
@@ -727,7 +724,7 @@ h2 {
 }
 
 .swiper-pagination-progressbar span {
-    background-color: #dd0060 !important;
+    background-color: $pink !important;
 }
 
 .swiper-pagination-progressbar {
@@ -882,7 +879,7 @@ h2 {
         }
       span {
         font-weight: 800;
-          color: #dd0060;
+          color: $pink;
           font-size: 14px;
           padding-left: 5px;
         font-family: "Open";
@@ -924,7 +921,9 @@ h2 {
     max-height: 42px !important;
     display: none;
   }
-
+.center-wrap--montazh {
+  padding-top: 190px;
+}
 .search-montazh {
   background: #ececec;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.24);
@@ -951,11 +950,13 @@ h2 {
 
 
   .md-layout {
-    background: #f7f7f7;
     width: 40%;
     margin-right: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
     margin-left: 0px !important;
-    border: 1px solid rgba(0,0,0,.2);
+    .md-ripple {
+      display: none !important;
+    }
     > div {
       padding: 0px;
     }
@@ -974,20 +975,17 @@ h2 {
   }
 
   .md-field {
-    background: #f7f7f7;
     width: 42.5%;
-    border: 1px solid rgba(0,0,0,.2);
-    padding-left: 10px;
-    padding-top: 0px !important;
     margin-bottom: 0px !important;
     margin-right: 20px;
-    &::after {
-      display: none;
+    padding-left: 5px;
+    input {
+      height: 30px !important;
     }
   }
 
   label {
-    padding-left: 10px;
+    padding-left: 5px;
     top: calc( 50% - 10px );
     font-size: 16px;
     font-weight: 300 !important;
