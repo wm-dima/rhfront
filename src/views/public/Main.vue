@@ -889,7 +889,6 @@ h2 {
 .search-montazh {
   background: #ececec;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.24);
-  border-radius: 3px;
   padding-left: 40px;
   padding-top: 20px;
   padding-right: 40px;
@@ -914,7 +913,7 @@ h2 {
   .md-layout {
     width: 40%;
     margin-right: 20px;
-    border-bottom: 1px solid rgba(0,0,0,.2);
+    border-bottom: 1px solid #a2a2a2;
     margin-left: 0px !important;
     .md-ripple {
       display: none !important;
@@ -943,6 +942,9 @@ h2 {
     padding-left: 5px;
     input {
       height: 30px !important;
+    }
+    &::after {
+      background-color: #a2a2a2 !important;
     }
   }
 
