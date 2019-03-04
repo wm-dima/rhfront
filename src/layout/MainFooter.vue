@@ -103,4 +103,7 @@ export default {
 };
 </script>
 <style>
+footer {
+  margin-top: 25px;
+}
 </style>

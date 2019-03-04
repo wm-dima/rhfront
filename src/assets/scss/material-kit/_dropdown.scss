@@ -185,6 +185,20 @@
    }
   }
 }
+   .search-montazh .md-list-item-container .md-ripple{
+     min-height: 40px !important;
+     justify-content: space-between !important;
+   }
+
+   .search-montazh .dropdown-menu {
+    margin-top: 3px !important;
+   }
+
+      .search-montazh .md-ripple p {
+      font-size: 16px !important;
+      font-weight: 300 !important;
+      color: #979797 !important;
+    }
 
 .dropdown-toggle .md-ripple:after,
 .dropdown .dropdown-menu .dropdown-toggle:after{

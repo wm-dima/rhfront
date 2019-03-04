@@ -149,6 +149,7 @@
     .md-button-content{
       display: flex;
       align-items: center;
+      font-weight: 500 !important;
 
       i + span{
         margin-left: 5px;
@@ -184,3 +185,12 @@
     margin-right: 0;
   }
 }
+
+div div.slider-grid__item-wrap .md-button-content{
+  color: #dd0060 !important;
+}
+
+div div.slider-grid__item-wrap  .md-ripple {
+  padding-left: 0px;
+}
+
