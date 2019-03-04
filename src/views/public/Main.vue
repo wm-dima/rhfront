@@ -6,7 +6,7 @@
           <div>
             <md-field>
               <label>Адрес объекта</label>
-              <md-input v-model="initial"></md-input>
+              <md-input v-model="objAddress"></md-input>
             </md-field>
 
             <template>
@@ -54,14 +54,14 @@
           <div class="slider-grid__prev"></div>
           <div class="slider-grid__next"></div>
           <div class="slider-grid">     
-            <swiper1 class="swiper-container" ref="mySwiper1" :options="swiperOption1">
-                <swiper-slide1 class="swiper-slide slider-grid__item slider-grid__item--hight">
+            <swiper class="swiper-container" ref="mySwiper1" :options="swiperOption1">
+                <swiper-slide class="swiper-slide slider-grid__item slider-grid__item--hight">
                   <div>
                     <img :src="gridSlider.img1" alt="">
                   </div>
                   <h3>Водоснабжение<br> и канализация</h3>
-                </swiper-slide1>
-                <swiper-slide1 class="swiper-slide slider-grid__item">
+                </swiper-slide>
+                <swiper-slide class="swiper-slide slider-grid__item">
                   <div>
                     <img :src="gridSlider.img2" alt="">
                     <h3>Тёплый пол</h3>
@@ -70,8 +70,8 @@
                     <img :src="gridSlider.img3" alt="">
                     <h3>Настенный/потолочный обогрев/охлаждение</h3>
                   </div>
-                </swiper-slide1>
-                <swiper-slide1 class="swiper-slide slider-grid__item">
+                </swiper-slide>
+                <swiper-slide class="swiper-slide slider-grid__item">
                   <div>
                     <img :src="gridSlider.img4" alt="">
                     <div class="slider-grid__item-wrap">
@@ -84,8 +84,8 @@
                     <img :src="gridSlider.img5" alt="">
                     <h3>Радиаторное отопление</h3>
                   </div>
-                </swiper-slide1>
-            </swiper1>
+                </swiper-slide>
+            </swiper>
 
             
             <div class="swiper-pagination"  slot="pagination"></div>
@@ -117,40 +117,40 @@
           <div class="slider-where-container">
             <div class="slider-where__prev"></div>
             <div class="slider-where__next"></div>
-          <swiper2 ref="mySwiper2" :options="swiperOption2">
-              <swiper-slide2 class="swiper-slide">
+          <swiper ref="mySwiper2" :options="swiperOption2">
+              <swiper-slide class="swiper-slide">
                 <div>
                   <img :src="sliderWhere.img1" alt="">
                   <h3>Москва</h3>
                 </div>
                 <p>Монтажников:<span>19</span></p>
                 <p>Монтажных организаций:<span>7</span></p>
-              </swiper-slide2>
-              <swiper-slide2 class="swiper-slide">
+              </swiper-slide>
+              <swiper-slide class="swiper-slide">
                 <div>
                   <img :src="sliderWhere.img2" alt="">
                   <h3>Санкт-Пертербург</h3>
                 </div>
                 <p>Монтажников:<span>17</span></p>
                 <p>Монтажных организаций:<span>4</span></p>
-              </swiper-slide2>
-              <swiper-slide2 class="swiper-slide">
+              </swiper-slide>
+              <swiper-slide class="swiper-slide">
                 <div>
                   <img :src="sliderWhere.img3" alt="">
                   <h3>Минск</h3>
                 </div>
                 <p>Монтажников:<span>13</span></p>
                 <p>Монтажных организаций:<span>8</span></p>
-              </swiper-slide2>
-              <swiper-slide2 class="swiper-slide">
+              </swiper-slide>
+              <swiper-slide class="swiper-slide">
                 <div>
                   <img :src="sliderWhere.img4" alt="">
                   <h3>Казань</h3>
                 </div>
                 <p>Монтажников:<span>21</span></p>
                 <p>Монтажных организаций:<span>9</span></p>
-              </swiper-slide2>
-            </swiper2>
+              </swiper-slide>
+            </swiper>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@
           <div>
             <md-field>
               <label>Адрес объекта</label>
-              <md-input v-model="initial"></md-input>
+              <md-input v-model="objAddress"></md-input>
             </md-field>
 
             <template>
@@ -204,8 +204,8 @@
           <div class="slider-grid__next"></div>
           <div class="slider-grid">
 
-            <swiper3 class="swiper-container" ref="mySwiper3" :options="swiperOption3">
-                <swiper-slide3 class="swiper-slide slider-grid__item slider-grid__item--hight">
+            <swiper class="swiper-container" ref="mySwiper3" :options="swiperOption3">
+                <swiper-slide class="swiper-slide slider-grid__item slider-grid__item--hight">
                   <div>
                     <img :src="teamSlider.img1" alt="">
                   </div>
@@ -217,8 +217,8 @@
                     <h3>Иванов Иван</h3>
                   </section>
                   <section class="slider-grid__images"></section>
-                </swiper-slide3>
-                <swiper-slide3 class="swiper-slide slider-grid__item">
+                </swiper-slide>
+                <swiper-slide class="swiper-slide slider-grid__item">
                   <div>
                     <img :src="teamSlider.img2" alt="">
                   <section class="slider-grid__info slider-grid__info--gray">
@@ -241,8 +241,8 @@
                   </section>
                   <section class="slider-grid__images"></section>
                   </div>
-                </swiper-slide3>
-                <swiper-slide3 class="swiper-slide slider-grid__item">
+                </swiper-slide>
+                <swiper-slide class="swiper-slide slider-grid__item">
                   <div>
                     <img :src="teamSlider.img4" alt="">
                   <section class="slider-grid__info slider-grid__info--pink">
@@ -265,8 +265,8 @@
                   </section>
                   <section class="slider-grid__images"></section>
                   </div>
-                </swiper-slide3>
-            </swiper3>
+                </swiper-slide>
+            </swiper>
 
           </div>
         </div>
@@ -329,9 +329,7 @@
 
   });
   import 'swiper/dist/css/swiper.css'
-  import { swiper as swiper1, swiperSlide as swiperSlide1 } from 'vue-awesome-swiper'
-  import { swiper as swiper2, swiperSlide as swiperSlide2 } from 'vue-awesome-swiper'
-  import { swiper as swiper3, swiperSlide as swiperSlide3 } from 'vue-awesome-swiper'
+  import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 
   import { ProfileCard, InfoAreas, BlogCard } from "@/components";
@@ -352,15 +350,14 @@
       Modal,
       InfoAreas,
       BlogCard,
-      swiper1,
-      swiper2,
-      swiper3,
-      swiperSlide1
+      swiper,
+      swiperSlide
     },
 
     bodyClass: "about-us",
     data () {
       return {
+        objAddress: '',
         subscribe: null,
         image2: require("@/assets/img/main/ecommerce-header.jpg"),
         image5: require("@/assets/img/main/bg9.jpg"),
